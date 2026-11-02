@@ -1,0 +1,79 @@
+.counting-game {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px;
+}
+
+.counting-game__counter {
+  text-align: center;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.counting-game__number {
+  font-size: 64px;
+  font-weight: 900;
+  display: inline-block;
+  line-height: 1;
+}
+
+.counting-game__target {
+  font-size: 28px;
+  font-weight: 700;
+  opacity: 0.4;
+}
+
+.counting-game__scene {
+  flex: 1;
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 200px;
+}
+
+.counting-game__obj {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: var(--min-touch-target, 48px);
+  min-height: var(--min-touch-target, 48px);
+  z-index: 1;
+  transition: filter 0.2s;
+}
+
+.counting-game__obj--counted {
+  pointer-events: none;
+  filter: grayscale(0.5);
+}
+
+.counting-game__emoji {
+  font-size: 44px;
+  line-height: 1;
+}
+
+.counting-game__check {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #4ade80;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}

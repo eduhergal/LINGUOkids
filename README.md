@@ -1,6 +1,6 @@
 # 🎓 LINGUOkids
 
-**App educativa interactiva para niños de 2 a 8 años** — aprendizaje de letras, números, colores, animales, alimentos y música a través de juegos táctiles diseñados para iPad.
+**App educativa interactiva para niños de 2 a 8 años** — aprendizaje de letras, números, colores, animales, alimentos, música, matemáticas, cuentos y escritura a través de juegos táctiles diseñados para iPad.
 
 [![TypeScript](https://img.shields.io/badge/TypeScript-7.0-blue)]()
 [![React](https://img.shields.io/badge/React-19-61dafb)]()
@@ -46,8 +46,12 @@ LINGUOkids es una **PWA (Progressive Web App)** educativa que funciona **100% of
 ### Para niños
 | Característica | Descripción |
 |---|---|
-| **10 tipos de juegos** | Trazado, identificación, parejas, memoria, colorear, arrastrar, construir palabras, buscar, mostrar y contar, ordenar |
-| **6 mundos temáticos** | ABC (A-Z), Números (1-20), Colores, Animales, Comida, Música |
+| **16 tipos de juegos** | Trazado, identificación, parejas, memoria, colorear, arrastrar, construir palabras, buscar, mostrar y contar, ordenar, piano interactivo, contar objetos, comparar grupos, operaciones matemáticas, cuentos interactivos, escritura libre |
+| **7 mundos temáticos** | ABC (A-Z), Números (1-20), Colores, Animales, Comida, Música, Matemáticas |
+| **Audio TTS** | Pronunciación de letras, números y palabras con Web Speech API (funciona offline en iPad) |
+| **Cuentos interactivos** | 6 historias bilingües con ilustraciones, lectura en voz alta y quiz de comprensión |
+| **Piano interactivo** | Teclado de 2 octavas con 28 canciones infantiles y modo libre |
+| **Escritura libre** | Canvas de dibujo con modelo de letra superpuesto, 6 colores y 3 grosores |
 | **3 temas visuales** | Bosque Mágico, Aventura Cósmica, Jardín Encantado |
 | **Mascota guía** | Cada tema tiene una mascota animada con frases de ánimo |
 | **Dificultad adaptativa** | Se ajusta automáticamente según el rendimiento del niño |
@@ -70,7 +74,7 @@ LINGUOkids es una **PWA (Progressive Web App)** educativa que funciona **100% of
 
 ## 🌍 Mundos y currículo
 
-La app organiza el contenido en **6 mundos**, cada uno con temas, unidades y lecciones progresivas:
+La app organiza el contenido en **7 mundos**, cada uno con temas, unidades y lecciones progresivas:
 
 ### 🔤 ABC — El Alfabeto (A-Z)
 - **26 letras** con actividades de trazado e identificación
@@ -97,7 +101,34 @@ La app organiza el contenido en **6 mundos**, cada uno con temas, unidades y lec
 
 ### 🎵 Música
 - **10 instrumentos**: piano, guitarra, violín, tambor, flauta, trompeta, arpa, xilófono, maracas, pandereta
-- Actividades: memory de sonidos, emparejar instrumento-nombre, buscar en escena
+- **Piano interactivo**: teclado de 2 octavas con síntesis Web Audio
+- **28 canciones infantiles** + 3 K-pop con notas cayendo estilo Guitar Hero
+- Actividades: emparejar instrumento-nombre, buscar en escena, tocar piano libre
+
+### 🧮 Matemáticas (NUEVO)
+- **47 actividades** organizadas en 8 temas progresivos
+- **Contar (1-20)**: tocar objetos uno a uno para contar
+- **Más o menos**: comparar dos grupos y elegir el mayor/menor
+- **Sumas**: operaciones visuales con emojis (1+1 hasta 4+6)
+- **Restas**: operaciones visuales (3-1 hasta 10-4)
+- **Multiplicación**: tablas básicas visuales (2×2 hasta 5×5)
+- **División**: divisiones sencillas (4÷2 hasta 20÷5)
+- Adaptado por edades: 2-4 años (contar), 4-6 (sumas/restas), 6-8 (multiplicar/dividir)
+
+### 📖 Cuentos interactivos (NUEVO)
+- **6 historias bilingües** (una por mundo original)
+- Páginas con fondos gradiente e ilustraciones emoji
+- Botón **Aa** para alternar mayúsculas/minúsculas
+- Botón **🔊** para lectura en voz alta (Web Speech API)
+- **Quiz de comprensión** al final de cada cuento
+- Cuentos: La aventura de la A, Los tres ositos, El arcoíris mágico, La granja divertida, La ensalada gigante, La orquesta del bosque
+
+### ✏️ Escritura libre (NUEVO)
+- **Canvas de dibujo** a pantalla completa
+- **Letra modelo** translúcida de fondo para practicar
+- **6 colores** y **3 grosores** de línea
+- Botones de **deshacer**, **borrar** y **listo**
+- Transición natural del trazado guiado a la escritura independiente
 
 ---
 
@@ -132,6 +163,24 @@ Se presenta un objeto y el niño aprende su nombre en ambos idiomas con interacc
 
 ### 10. 📊 Ordenar (sorting)
 Colocar elementos en el orden correcto (alfabético, numérico o por tamaño).
+
+### 11. 🎹 Piano interactivo (piano)
+Teclado de 2 octavas con síntesis de sonido Web Audio API. Modo canciones con notas cayendo (Guitar Hero) y modo libre para tocar lo que quieran. 28 canciones infantiles populares.
+
+### 12. 🔢 Contar objetos (counting)
+Objetos emoji dispersos en pantalla que el niño toca uno a uno. Contador visual grande que sube con cada toque. Celebración al llegar al número objetivo.
+
+### 13. ⚖️ Comparar grupos (comparison)
+Dos grupos de objetos lado a lado. El niño debe elegir cuál tiene más (o menos). Desarrolla sentido numérico y estimación visual.
+
+### 14. 🧮 Operaciones matemáticas (math_ops)
+Problemas visuales de suma, resta, multiplicación y división con emojis. 3 opciones de respuesta. Feedback inmediato con visualización del resultado.
+
+### 15. 📖 Cuentos interactivos (story)
+Historias de 4-5 páginas con fondos coloridos, emojis grandes y texto bilingüe. Navegación por swipe o flechas. Lectura en voz alta con TTS. Quiz de comprensión al final.
+
+### 16. ✏️ Escritura libre (free_write)
+Canvas de dibujo con modelo de letra translúcido de fondo. El niño escribe encima con el dedo. Paleta de colores y grosores. Transición del trazado guiado a escritura independiente.
 
 ---
 
@@ -212,7 +261,7 @@ La primera vez que un niño abre cualquier tipo de actividad, se muestra un tuto
 | **Bundler** | Vite 8 |
 | **Animaciones** | Framer Motion 14 |
 | **Base de datos** | Dexie.js 4 (IndexedDB) |
-| **Audio** | Howler.js 2 + Web Audio API |
+| **Audio** | Howler.js 2 + Web Audio API + Web Speech API (TTS) |
 | **PWA/Offline** | vite-plugin-pwa + Workbox |
 | **Routing** | React Router 7 |
 | **Testing** | Vitest 5 + Testing Library |
@@ -231,7 +280,7 @@ React 19 (UI declarativa)
 ```
 
 ### Bundle
-- **Tamaño total**: ~653 KiB (30 archivos precacheados)
+- **Tamaño total**: ~727 KiB (30 archivos precacheados)
 - **Code splitting**: React.lazy + Suspense para cada pantalla
 - **Offline**: Service Worker cachea todos los assets en la primera carga
 
@@ -311,16 +360,22 @@ LINGUOkids/
 │   │   ├── icons/                # Iconos PWA (192x192, 512x512)
 │   │   └── manifest.webmanifest  # Manifest PWA
 │   ├── src/
-│   │   ├── activities/           # 10 tipos de actividad
+│   │   ├── activities/           # 16 tipos de actividad
 │   │   │   ├── Coloring/
+│   │   │   ├── Comparison/       # Comparar grupos (NUEVO)
+│   │   │   ├── Counting/         # Contar objetos (NUEVO)
 │   │   │   ├── DragAndDrop/
+│   │   │   ├── FreeWrite/        # Escritura libre (NUEVO)
 │   │   │   ├── ISpy/
 │   │   │   ├── Matching/
+│   │   │   ├── MathOps/          # Operaciones matemáticas (NUEVO)
 │   │   │   ├── MemoryCards/
 │   │   │   ├── PhonicsIdentify/
 │   │   │   ├── PhonicsTrace/
+│   │   │   ├── Piano/            # Piano interactivo (NUEVO)
 │   │   │   ├── ShowAndTell/
 │   │   │   ├── Sorting/
+│   │   │   ├── Story/            # Cuentos interactivos (NUEVO)
 │   │   │   └── WordBuilder/
 │   │   ├── components/           # Componentes reutilizables
 │   │   │   ├── BottomNav/
@@ -331,14 +386,17 @@ LINGUOkids/
 │   │   │   ├── SandTimer/
 │   │   │   ├── ScreenTimeModal/
 │   │   │   ├── StreakBadge/
+│   │   │   ├── SvgIllustration/  # Ilustraciones SVG Disney Pixar (NUEVO)
 │   │   │   └── TutorialOverlay/
 │   │   ├── data/                 # Currículo y contenido
-│   │   │   └── curriculum.ts     # 6 mundos, ~100+ actividades
+│   │   │   ├── curriculum.ts     # 7 mundos, ~200+ actividades
+│   │   │   ├── mathCurriculum.ts # Mundo Mates: 8 temas, 47 actividades
+│   │   │   └── stories.ts       # 6 cuentos bilingües con quiz
 │   │   ├── db/                   # Base de datos IndexedDB
 │   │   │   └── database.ts       # Dexie v4, 8 tablas, 3 migraciones
 │   │   ├── hooks/                # React hooks personalizados
 │   │   ├── screens/              # Pantallas principales
-│   │   │   ├── Activity/         # Pantalla de juego
+│   │   │   ├── Activity/         # Pantalla de juego (16 tipos)
 │   │   │   ├── ChildSelect/      # Selección de perfil
 │   │   │   ├── Favorites/        # Actividades favoritas
 │   │   │   ├── Home/             # Pantalla principal
@@ -356,6 +414,7 @@ LINGUOkids/
 │   │   │   ├── profiles.ts
 │   │   │   ├── progress.ts
 │   │   │   ├── screenTime.ts
+│   │   │   ├── tts.ts            # Text-to-Speech bilingüe (NUEVO)
 │   │   │   └── tutorial.ts
 │   │   ├── styles/               # CSS global y tokens
 │   │   ├── themes/               # Sistema de 3 temas
@@ -388,17 +447,24 @@ LINGUOkids/
 
 ## 🗺 Roadmap
 
+### Implementado en v2.0
+- [x] Audio TTS: pronunciación de letras, números y palabras con Web Speech API
+- [x] Ilustraciones SVG propias estilo Disney Pixar (70+ ilustraciones)
+- [x] Cuentos interactivos bilingües con quiz de comprensión (6 historias)
+- [x] Piano interactivo con 28 canciones infantiles y modo libre
+- [x] Matemáticas: contar, comparar, sumar, restar, multiplicar, dividir (47 actividades)
+- [x] Escritura libre: canvas con modelo de letra y herramientas de dibujo
+
 ### Próximas mejoras
-- [ ] Assets reales: imágenes SVG/PNG e iconos por actividad
-- [ ] Audio real: pronunciación de letras, números y palabras en MP3
+- [ ] Assets reales: imágenes PNG de alta calidad por actividad
 - [ ] Exportar reporte semanal a PDF
 - [ ] Más tests de componentes
 - [ ] Animaciones Lottie para celebraciones
 - [ ] Modo nocturno/lectura
 - [ ] Soporte para más idiomas (PT, FR)
-- [ ] Actividades de escritura libre (canvas)
-- [ ] Cuentos interactivos con audio
-- [ ] Mini-juegos musicales con Web Audio API
+- [ ] Más cuentos interactivos (uno por cada mundo Math)
+- [ ] Actividades de ritmo musical
+- [ ] Dictado de palabras con reconocimiento de voz
 
 ---
 

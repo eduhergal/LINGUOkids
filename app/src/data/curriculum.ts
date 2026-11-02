@@ -1,4 +1,6 @@
 import type { World, ActivityDef } from '@/types';
+import { mathWorld, allMathActivities } from './mathCurriculum';
+import { stories } from './stories';
 
 // --- SVG paths for letter tracing ---
 const LETTER_PATHS: Record<string, string> = {
@@ -439,8 +441,31 @@ export const worlds: World[] = [
           },
         ],
       },
+      {
+        id: 'piano-play', worldId: 'music',
+        name: { en: 'Play Piano', es: 'Toca el Piano' },
+        description: { en: 'Play songs and melodies', es: 'Toca canciones y melodías' },
+        thumbnailPath: '',
+        units: [
+          { id: 'unit-piano', topicId: 'piano-play', name: { en: 'Piano', es: 'Piano' }, order: 1,
+            lessons: [
+              { id: 'lesson-piano-songs', unitId: 'unit-piano', name: { en: 'Learn songs', es: 'Aprende canciones' }, order: 1,
+                activities: [
+                  { activityId: 'piano-songs', order: 1, required: true },
+                ],
+              },
+              { id: 'lesson-piano-free', unitId: 'unit-piano', name: { en: 'Free play', es: 'Tocar libre' }, order: 2,
+                activities: [
+                  { activityId: 'piano-free', order: 1, required: true },
+                ],
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
+  mathWorld,
 ];
 
 // --- Activities ---
@@ -507,6 +532,8 @@ export const activities: ActivityDef[] = [
   { id: 'dnd-food', type: 'drag_and_drop', name: { en: 'Fruits vs Veggies', es: 'Frutas vs Verduras' }, instructions: { en: 'Drag each food to its group', es: 'Arrastra cada alimento a su grupo' }, instructionAudioPath: '', difficulty: 1, estimatedTimeSeconds: 45, config: { items: [{ id: 'apple2', emoji: '🍎', label: { en: 'Apple', es: 'Manzana' } }, { id: 'carrot', emoji: '🥕', label: { en: 'Carrot', es: 'Zanahoria' } }, { id: 'banana', emoji: '🍌', label: { en: 'Banana', es: 'Plátano' } }, { id: 'broccoli', emoji: '🥦', label: { en: 'Broccoli', es: 'Brócoli' } }], zones: [{ id: 'fruits', label: { en: 'Fruits', es: 'Frutas' }, accepts: ['apple2', 'banana'] }, { id: 'vegs', label: { en: 'Vegetables', es: 'Verduras' }, accepts: ['carrot', 'broccoli'] }] } },
 
   // ======= MUSIC =======
+  { id: 'piano-songs', type: 'piano', name: { en: 'Piano Songs', es: 'Canciones al Piano' }, instructions: { en: 'Play songs on the piano!', es: '¡Toca canciones al piano!' }, instructionAudioPath: '', difficulty: 1, estimatedTimeSeconds: 120, config: { mode: 'song' } },
+  { id: 'piano-free', type: 'piano', name: { en: 'Free Piano', es: 'Piano Libre' }, instructions: { en: 'Play the piano freely!', es: '¡Toca el piano libremente!' }, instructionAudioPath: '', difficulty: 1, estimatedTimeSeconds: 120, config: { mode: 'free' } },
   { id: 'match-instruments', type: 'matching', name: { en: 'Match instruments', es: 'Empareja instrumentos' }, instructions: { en: 'Match the instrument to its name', es: 'Empareja el instrumento con su nombre' }, instructionAudioPath: '', difficulty: 1, estimatedTimeSeconds: 40, config: { pairs: [{ image: '🎸', word: { en: 'Guitar', es: 'Guitarra' } }, { image: '🎹', word: { en: 'Piano', es: 'Piano' } }, { image: '🥁', word: { en: 'Drums', es: 'Batería' } }, { image: '🎺', word: { en: 'Trumpet', es: 'Trompeta' } }] } },
   { id: 'ispy-instruments', type: 'i_spy', name: { en: 'I Spy instruments', es: 'Busca instrumentos' }, instructions: { en: 'Find all the instruments', es: 'Encuentra todos los instrumentos' }, instructionAudioPath: '', difficulty: 2, estimatedTimeSeconds: 45, config: { targets: ['🎸', '🎹', '🥁', '🎺'], scene: ['🎸', '🌳', '🎹', '🏠', '🥁', '☀️', '🎺', '⛅', '🌺'] } },
   { id: 'memory-instruments', type: 'memory_cards', name: { en: 'Instrument memory', es: 'Memoria musical' }, instructions: { en: 'Find the matching pairs', es: 'Encuentra las parejas' }, instructionAudioPath: '', difficulty: 1, estimatedTimeSeconds: 60, config: { cards: ['🎸', '🎹', '🥁', '🎺', '🎻'] } },
@@ -520,6 +547,26 @@ export const activities: ActivityDef[] = [
   { id: 'build-casa', type: 'word_builder', name: { en: 'Build CASA', es: 'Construye CASA' }, instructions: { en: 'Build the word', es: 'Construye la palabra' }, instructionAudioPath: '', difficulty: 2, estimatedTimeSeconds: 40, config: { word: 'CASA', hint: { en: 'House', es: 'Donde vivimos' }, emoji: '🏠' } },
   { id: 'build-luna', type: 'word_builder', name: { en: 'Build LUNA', es: 'Construye LUNA' }, instructions: { en: 'Build the word', es: 'Construye la palabra' }, instructionAudioPath: '', difficulty: 2, estimatedTimeSeconds: 40, config: { word: 'LUNA', hint: { en: 'Moon', es: 'Brilla en la noche' }, emoji: '🌙' } },
   { id: 'build-pato', type: 'word_builder', name: { en: 'Build PATO', es: 'Construye PATO' }, instructions: { en: 'Build the word', es: 'Construye la palabra' }, instructionAudioPath: '', difficulty: 2, estimatedTimeSeconds: 40, config: { word: 'PATO', hint: { en: 'Duck', es: 'Ave que nada en el lago' }, emoji: '🦆' } },
+
+  // ======= MATH =======
+  ...allMathActivities,
+
+  // ======= STORIES =======
+  ...stories.map((s): ActivityDef => ({
+    id: s.id,
+    type: 'story',
+    name: s.title,
+    instructions: { en: 'Read and enjoy the story!', es: '¡Lee y disfruta el cuento!' },
+    instructionAudioPath: '',
+    difficulty: 1,
+    estimatedTimeSeconds: 120,
+    config: { story: { title: s.title, pages: s.pages, questions: s.questions } },
+  })),
+
+  // ======= FREE WRITE =======
+  { id: 'free-write-a', type: 'free_write', name: { en: 'Write letter A', es: 'Escribe la A' }, instructions: { en: 'Practice writing the letter A', es: 'Practica escribir la letra A' }, instructionAudioPath: '', difficulty: 1, estimatedTimeSeconds: 60, config: { letter: 'A' } },
+  { id: 'free-write-b', type: 'free_write', name: { en: 'Write letter B', es: 'Escribe la B' }, instructions: { en: 'Practice writing the letter B', es: 'Practica escribir la letra B' }, instructionAudioPath: '', difficulty: 1, estimatedTimeSeconds: 60, config: { letter: 'B' } },
+  { id: 'free-write-free', type: 'free_write', name: { en: 'Free drawing', es: 'Dibujo libre' }, instructions: { en: 'Draw or write whatever you want!', es: '¡Dibuja o escribe lo que quieras!' }, instructionAudioPath: '', difficulty: 1, estimatedTimeSeconds: 120, config: {} },
 ];
 
 export function getActivity(id: string): ActivityDef | undefined {

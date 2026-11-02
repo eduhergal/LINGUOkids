@@ -15,7 +15,13 @@ export type ActivityType =
   | 'word_builder'
   | 'i_spy'
   | 'show_and_tell'
-  | 'sorting';
+  | 'sorting'
+  | 'piano'
+  | 'counting'
+  | 'comparison'
+  | 'math_ops'
+  | 'story'
+  | 'free_write';
 
 export type ThemeId = 'forest' | 'space' | 'garden';
 

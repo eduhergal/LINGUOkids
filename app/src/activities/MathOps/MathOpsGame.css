@@ -1,0 +1,179 @@
+.mathops-game {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px;
+  gap: 12px;
+}
+
+.mathops-game__progress {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.mathops-game__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.mathops-game__formula {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.mathops-game__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Visual representations */
+.mathops-game__visual {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+  max-width: 100%;
+}
+
+.mathops-game__visual--grid {
+  flex-direction: column;
+}
+
+.mathops-game__emoji-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+
+.mathops-game__emoji-group--crossed {
+  position: relative;
+  opacity: 0.35;
+}
+
+.mathops-game__emoji-group--crossed::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  right: -4px;
+  height: 3px;
+  background: #f87171;
+  border-radius: 2px;
+  transform: rotate(-5deg);
+}
+
+.mathops-game__emoji {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.mathops-game__sub-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+.mathops-game__mul-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.mathops-game__op {
+  font-size: 28px;
+  font-weight: 900;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.mathops-game__question-mark {
+  font-size: 36px;
+  font-weight: 900;
+  color: #fbbf24;
+  min-width: 48px;
+  text-align: center;
+}
+
+/* Answer options */
+.mathops-game__options {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mathops-game__option {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  border: 3px solid;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  font-size: 28px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.mathops-game__option:active {
+  transform: scale(0.93);
+}
+
+.mathops-game__option--correct {
+  background: rgba(74, 222, 128, 0.2) !important;
+  border-color: #4ade80 !important;
+  animation: mathops-pop 0.4s ease;
+}
+
+.mathops-game__option--wrong {
+  background: rgba(248, 113, 113, 0.15) !important;
+  border-color: #f87171 !important;
+  animation: mathops-shake 0.3s ease;
+}
+
+.mathops-game__option--reveal {
+  border-color: #4ade80 !important;
+  opacity: 0.6;
+}
+
+@keyframes mathops-pop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+@keyframes mathops-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.mathops-game__msg {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  padding: 6px 14px;
+  border-radius: 10px;
+  background: rgba(248, 113, 113, 0.12);
+  color: #fca5a5;
+}

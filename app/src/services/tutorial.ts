@@ -65,6 +65,30 @@ const tutorialSteps: Record<string, TutorialStep[]> = {
     { emoji: '📊', text: { en: 'Put these in the right order!', es: '¡Ponlos en el orden correcto!' } },
     { emoji: '👆', text: { en: 'Drag items to swap them', es: 'Arrastra los items para moverlos' } },
   ],
+  piano: [
+    { emoji: '🎹', text: { en: 'Play the falling notes!', es: '¡Toca las notas que caen!' } },
+    { emoji: '👆', text: { en: 'Tap the right key when the note reaches the bottom', es: 'Toca la tecla correcta cuando la nota llegue abajo' } },
+  ],
+  counting: [
+    { emoji: '👆', text: { en: 'Tap each object to count it!', es: '¡Toca cada objeto para contarlo!' } },
+    { emoji: '🔢', text: { en: 'Count them all to finish!', es: '¡Cuéntalos todos para terminar!' } },
+  ],
+  comparison: [
+    { emoji: '👀', text: { en: 'Look at both groups carefully', es: 'Mira los dos grupos con atención' } },
+    { emoji: '👆', text: { en: 'Tap the group that has more!', es: '¡Toca el grupo que tiene más!' } },
+  ],
+  math_ops: [
+    { emoji: '🧮', text: { en: 'Look at the math problem', es: 'Mira el problema de mates' } },
+    { emoji: '👆', text: { en: 'Tap the correct answer!', es: '¡Toca la respuesta correcta!' } },
+  ],
+  story: [
+    { emoji: '📖', text: { en: 'Swipe or tap arrows to turn pages', es: 'Desliza o toca las flechas para pasar páginas' } },
+    { emoji: '🔊', text: { en: 'Tap the speaker to hear the story!', es: '¡Toca el altavoz para escuchar el cuento!' } },
+  ],
+  free_write: [
+    { emoji: '✏️', text: { en: 'Draw or write with your finger!', es: '¡Dibuja o escribe con tu dedo!' } },
+    { emoji: '🎨', text: { en: 'Pick a color and start creating!', es: '¡Elige un color y empieza a crear!' } },
+  ],
 };
 
 export function getSteps(activityType: string): TutorialStep[] {

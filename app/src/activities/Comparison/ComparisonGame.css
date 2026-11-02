@@ -1,0 +1,121 @@
+.comparison-game {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 12px;
+  gap: 16px;
+}
+
+.comparison-game__progress {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.comparison-game__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.comparison-game__round {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.comparison-game__question {
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.comparison-game__groups {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.comparison-game__group {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 16px 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-height: 120px;
+}
+
+.comparison-game__group:active {
+  transform: scale(0.96);
+}
+
+.comparison-game__group--correct {
+  border-color: #4ade80;
+  background: rgba(74, 222, 128, 0.15);
+  animation: comp-pulse-green 0.4s ease;
+}
+
+.comparison-game__group--wrong {
+  border-color: #f87171;
+  background: rgba(248, 113, 113, 0.1);
+  animation: comp-shake 0.3s ease;
+}
+
+@keyframes comp-pulse-green {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes comp-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.comparison-game__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  min-height: 48px;
+}
+
+.comparison-game__item {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.comparison-game__count {
+  font-size: 20px;
+  font-weight: 900;
+  opacity: 0.5;
+}
+
+.comparison-game__vs {
+  font-size: 18px;
+  font-weight: 900;
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.comparison-game__feedback {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: rgba(248, 113, 113, 0.12);
+  color: #fca5a5;
+}

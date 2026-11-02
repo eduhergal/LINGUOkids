@@ -2,7 +2,7 @@
 
 ## Bienvenidos a LINGUOkids
 
-LINGUOkids es una aplicación educativa diseñada para que niños de **2 a 8 años** aprendan letras, números, colores, animales, alimentos e instrumentos musicales a través de **juegos interactivos táctiles**.
+LINGUOkids es una aplicación educativa diseñada para que niños de **2 a 8 años** aprendan letras, números, colores, animales, alimentos, instrumentos musicales, matemáticas, lectura y escritura a través de **16 tipos de juegos interactivos táctiles**.
 
 Esta guía les ayudará a entender todas las funcionalidades de la app y cómo aprovecharla al máximo para el aprendizaje de sus hijos.
 
@@ -34,13 +34,13 @@ La app tiene **4 pantallas** accesibles desde la barra inferior:
 | Icono | Pantalla | Qué hace |
 |---|---|---|
 | 🏠 | **Inicio** | Panel principal con saludo, mascota, meta semanal y mundos |
-| 📚 | **Lecciones** | Navegar por los 6 mundos y sus actividades |
+| 📚 | **Lecciones** | Navegar por los 7 mundos y sus actividades |
 | ⭐ | **Favoritos** | Actividades que el niño ha marcado como favoritas |
 | 👨‍👩‍👧 | **Padres** | Configuración, reporte y controles parentales |
 
 ---
 
-## 🌍 Los 6 mundos de aprendizaje
+## 🌍 Los 7 mundos de aprendizaje
 
 ### 🔤 ABC — El Alfabeto
 **Qué aprenden**: reconocimiento y trazado de las 26 letras (A-Z)
@@ -92,13 +92,67 @@ La app tiene **4 pantallas** accesibles desde la barra inferior:
 - Hábitos alimenticios saludables (implícito)
 
 ### 🎵 Música
-**Qué aprenden**: 10 instrumentos musicales
+**Qué aprenden**: 10 instrumentos musicales + tocar piano
 
 **Habilidades que desarrolla**:
 - Reconocimiento de instrumentos
 - Vocabulario musical bilingüe
 - Memoria auditiva y visual
 - Apreciación musical
+- **Coordinación rítmica** (piano con notas cayendo)
+- **Creatividad musical** (piano en modo libre)
+
+**Actividades incluidas**:
+- Emparejar instrumentos con nombres
+- Buscar instrumentos en escena
+- **Piano interactivo** con 28 canciones infantiles (modo Guitar Hero)
+- **Piano libre** para componer y explorar
+
+### 🧮 Matemáticas (NUEVO)
+**Qué aprenden**: contar (1-20), comparar cantidades, sumar, restar, multiplicar y dividir
+
+**Habilidades que desarrolla**:
+- **Sentido numérico**: contar objetos tocándolos uno a uno
+- **Estimación visual**: comparar dos grupos y decidir cuál tiene más
+- **Operaciones básicas**: sumas y restas visuales con emojis
+- **Pensamiento abstracto**: multiplicación y división para los mayores
+- **Resolución de problemas**: elegir la respuesta correcta entre opciones
+
+**Progresión por edad**:
+- **2-4 años**: Contar 1-5, contar 6-10
+- **3-5 años**: Comparar grupos (más/menos)
+- **4-6 años**: Sumas y restas sencillas
+- **5-7 años**: Contar 11-20, sumas y restas mayores
+- **6-8 años**: Multiplicación y división básica
+
+**47 actividades** organizadas en 8 temas progresivos.
+
+### 📖 Cuentos interactivos (NUEVO)
+**Qué aprenden**: comprensión lectora, vocabulario, secuenciación narrativa
+
+**Habilidades que desarrolla**:
+- **Comprensión lectora**: quiz al final de cada cuento
+- **Vocabulario bilingüe**: texto en español e inglés
+- **Atención sostenida**: seguir una historia de 4-5 páginas
+- **Discriminación tipográfica**: alternar mayúsculas y minúsculas (botón Aa)
+- **Escucha activa**: lectura en voz alta con TTS
+
+**6 cuentos incluidos**:
+- La aventura de la A (ABC)
+- Los tres ositos (Números)
+- El arcoíris mágico (Colores)
+- La granja divertida (Animales)
+- La ensalada gigante (Comida)
+- La orquesta del bosque (Música)
+
+### ✏️ Escritura libre (NUEVO)
+**Qué aprenden**: escritura independiente, expresión gráfica
+
+**Habilidades que desarrolla**:
+- **Motricidad fina avanzada**: transición del trazado guiado a escritura libre
+- **Memoria de formas**: escribir con modelo translúcido de referencia
+- **Creatividad**: dibujo libre con colores y grosores
+- **Autonomía**: el niño elige qué y cómo escribir/dibujar
 
 ---
 
@@ -187,6 +241,65 @@ La app tiene **4 pantallas** accesibles desde la barra inferior:
 - Trabaja **secuenciación** y **orden lógico**
 - Refuerza **concepto de serie** (fundamental en matemáticas)
 - Desarrolla **pensamiento abstracto**
+
+### 🎹 Piano interactivo (NUEVO)
+**Cómo funciona**: Un teclado de 2 octavas con dos modos: en modo canciones, las notas caen desde arriba (estilo Guitar Hero) y el niño toca la tecla cuando llegan abajo; en modo libre, puede tocar lo que quiera.
+
+**Beneficios pedagógicos**:
+- **Coordinación motriz** y **ritmo**: seguir las notas que caen
+- **Oído musical**: asociar teclas con sonidos
+- **Creatividad**: modo libre para experimentar
+- **Perseverancia**: intentar seguir la canción completa
+
+**Consejo para padres**: Empiecen con el modo libre para que el niño explore los sonidos sin presión. Después pasen a las canciones más lentas.
+
+### 🔢 Contar objetos (NUEVO)
+**Cómo funciona**: Aparecen objetos emoji dispersos por la pantalla. El niño los toca uno a uno y un contador grande muestra cuántos lleva. Al llegar al número objetivo, celebración.
+
+**Beneficios pedagógicos**:
+- **Correspondencia uno a uno**: fundamento del conteo
+- **Concepto de cantidad**: conectar número con objetos reales
+- **Motricidad fina**: tocar objetos individuales en pantalla
+
+### ⚖️ Comparar grupos (NUEVO)
+**Cómo funciona**: Se muestran dos grupos de objetos lado a lado. El niño debe elegir cuál tiene más (o menos).
+
+**Beneficios pedagógicos**:
+- **Estimación visual**: evaluar cantidades sin contar
+- **Vocabulario matemático**: "más que", "menos que", "igual"
+- **Base para la resta**: entender la diferencia entre cantidades
+
+### 🧮 Operaciones matemáticas (NUEVO)
+**Cómo funciona**: Se presenta un problema (ej: 2 + 3 = ?) con emojis visuales y tres opciones de respuesta. El niño elige la correcta.
+
+**Beneficios pedagógicos**:
+- **Cálculo mental**: resolver operaciones de cabeza
+- **Pensamiento abstracto**: trabajar con símbolos matemáticos
+- **Automatización**: con la práctica, las sumas/restas básicas se vuelven automáticas
+
+**Consejo para padres**: Usen objetos reales en casa para reforzar. "Tenemos 3 manzanas, si te comes 1, ¿cuántas quedan?"
+
+### 📖 Cuentos interactivos (NUEVO)
+**Cómo funciona**: Historia de 4-5 páginas con ilustraciones y texto bilingüe. El niño pasa páginas con flechas o deslizando. Puede escuchar la historia en voz alta y alternar entre mayúsculas y minúsculas. Al final, quiz de comprensión.
+
+**Beneficios pedagógicos**:
+- **Comprensión lectora**: preguntas sobre el contenido de la historia
+- **Amor por la lectura**: historias cortas y atractivas
+- **Exposición a la escritura**: ver texto junto a imágenes
+- **Discriminación tipográfica**: alternar MAYÚSCULAS/minúsculas
+
+**Consejo para padres**: Lean el cuento con el niño la primera vez. Después déjenlo explorar solo. Las preguntas al final son un excelente punto de conversación.
+
+### ✏️ Escritura libre (NUEVO)
+**Cómo funciona**: Canvas oscuro con una letra modelo translúcida de fondo. El niño escribe/dibuja encima con el dedo. Puede elegir entre 6 colores y 3 grosores de línea. Botones de deshacer, borrar todo y terminar.
+
+**Beneficios pedagógicos**:
+- **Transición al papel**: del trazado guiado a la escritura independiente
+- **Creatividad**: libertad para dibujar lo que quieran
+- **Motricidad fina avanzada**: control preciso del trazo
+- **Autoexpresión**: elegir colores y crear libremente
+
+**Consejo para padres**: No corrijan la forma de las letras. El objetivo es que el niño **disfrute escribiendo**. La precisión vendrá con la práctica.
 
 ---
 

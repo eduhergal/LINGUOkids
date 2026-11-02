@@ -24,6 +24,12 @@ import { ColoringGame } from '@/activities/Coloring/ColoringGame';
 import { DragAndDropGame } from '@/activities/DragAndDrop/DragAndDropGame';
 import { WordBuilderGame } from '@/activities/WordBuilder/WordBuilderGame';
 import { SortingGame } from '@/activities/Sorting/SortingGame';
+import { PianoGame } from '@/activities/Piano/PianoGame';
+import { CountingGame } from '@/activities/Counting/CountingGame';
+import { ComparisonGame } from '@/activities/Comparison/ComparisonGame';
+import { MathOpsGame } from '@/activities/MathOps/MathOpsGame';
+import { StoryGame } from '@/activities/Story/StoryGame';
+import { FreeWriteGame } from '@/activities/FreeWrite/FreeWriteGame';
 import type { ActivityType } from '@/types';
 import type { TutorialStep } from '@/services/tutorial';
 import './Activity.css';
@@ -187,6 +193,55 @@ export function Activity() {
           <SortingGame
             items={cfg.items as string[]}
             correctOrder={cfg.correctOrder as string[]}
+            onComplete={handleComplete}
+          />
+        );
+      case 'piano':
+        return (
+          <PianoGame
+            onComplete={handleComplete}
+            mode={cfg.mode as 'song' | 'free'}
+          />
+        );
+      case 'counting':
+        return (
+          <CountingGame
+            targetCount={cfg.targetCount as number}
+            emoji={cfg.emoji as string}
+            onComplete={handleComplete}
+          />
+        );
+      case 'comparison':
+        return (
+          <ComparisonGame
+            leftCount={cfg.leftCount as number}
+            rightCount={cfg.rightCount as number}
+            leftEmoji={cfg.leftEmoji as string}
+            rightEmoji={cfg.rightEmoji as string}
+            onComplete={handleComplete}
+          />
+        );
+      case 'math_ops':
+        return (
+          <MathOpsGame
+            operation={cfg.operation as 'add' | 'subtract' | 'multiply' | 'divide'}
+            num1={cfg.num1 as number}
+            num2={cfg.num2 as number}
+            options={cfg.options as number[]}
+            onComplete={handleComplete}
+          />
+        );
+      case 'story':
+        return (
+          <StoryGame
+            story={cfg.story as { title: { en: string; es: string }; pages: Array<{ text: { en: string; es: string }; emoji: string; bg: string }>; questions: Array<{ question: { en: string; es: string }; options: Array<{ text: { en: string; es: string }; correct: boolean }> }> }}
+            onComplete={handleComplete}
+          />
+        );
+      case 'free_write':
+        return (
+          <FreeWriteGame
+            letter={cfg.letter as string | undefined}
             onComplete={handleComplete}
           />
         );
