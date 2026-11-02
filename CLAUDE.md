@@ -28,8 +28,10 @@ Ejecutar un análisis REA (Reverse Engineering & Acquisition) completo sobre la 
 >
 > Fase G — Tutorial interactivo + Reporte semanal + Temporizador visual. ✅
 >
-> **Estado**: 15/15 mejoras UX implementadas. Build limpio (653 KiB), 14 tests, 3 temas, tutorial, reporte, timer.
-> **Pendiente**: Assets reales (audio MP3, imágenes), exportar reporte a PDF, más tests de componentes.
+> Fase H — 6 nuevas funcionalidades: TTS, SVG, Cuentos, Piano, Matemáticas, Escritura libre. ✅
+>
+> **Estado**: v2.0 completa. 16 tipos de actividad, 7 mundos, 47 actividades de mates, 6 cuentos, piano interactivo. Build limpio (727 KiB), 14 tests, 3 temas.
+> **Pendiente**: Audio grabado real (ElevenLabs), más cuentos, sistema de logros, mapa de progreso visual, exportar PDF.
 
 ## Hallazgos del análisis estático (2026-11-01)
 
@@ -236,9 +238,26 @@ npx vite preview --port 4173
 **Impacto**: +11 KiB en el bundle (653 KiB total). Migración BD v3 sin riesgo (solo añade tabla nueva).
 
 ### 2026-11-02: Phaser.js descartado — React puro con Framer Motion
-**Qué pasó**: El blueprint original proponía Phaser.js para las actividades interactivas. En la implementación real, descubrimos que React + Framer Motion + SVG + Canvas nativo cubren todos los 10 tipos de actividad sin necesidad de un motor de juegos externo.
+**Qué pasó**: El blueprint original proponía Phaser.js para las actividades interactivas. En la implementación real, descubrimos que React + Framer Motion + SVG + Canvas nativo cubren los 16 tipos de actividad sin necesidad de un motor de juegos externo.
 **Decisión**: Todas las actividades se implementaron como componentes React puros: SVG para trazado (PhonicsTrace), Canvas overlay para dibujo, Framer Motion para drag-and-drop y animaciones, CSS animations para feedback visual.
 **Impacto**: Bundle 600KB más ligero, sin dependencia de Phaser, mejor integración con el ecosistema React, y toque responsivo en iPad.
+
+### 2026-11-02: v2.0 — 6 nuevas funcionalidades con arquitectura de agentes paralelos
+**Qué pasó**: Se implementaron 6 funcionalidades grandes en una sola sesión usando agentes fork en paralelo: TTS, SVG, Cuentos, Piano, Matemáticas y Escritura libre.
+**Decisiones técnicas**:
+- **TTS**: Web Speech API nativa (no librería externa). Funciona offline en iPad Safari con voces del sistema. Mapas fonéticos por letra para pronunciación correcta en ES/EN.
+- **Piano**: Síntesis con Web Audio API (4 osciladores con ADSR envelope). No se usa Tone.js ni librerías de audio. 28 canciones codificadas como arrays de {note, duration}.
+- **Matemáticas**: 47 actividades en `mathCurriculum.ts` separado de `curriculum.ts` para mantener modularidad. 3 nuevos tipos de actividad: counting, comparison, math_ops.
+- **Cuentos**: 6 historias en `stories.ts` con estructura StoryDef (pages + questions). Integración con TTS para lectura en voz alta.
+- **SVG**: 70+ ilustraciones como funciones TypeScript que retornan JSX. Helpers compartidos (drawEyes, drawSmile, drawBlush) para consistencia visual.
+- **Escritura libre**: Canvas 2D con evento touch/pointer. Letra modelo como SVG translúcido debajo del canvas.
+**Integración**: Los 6 nuevos tipos se añadieron a `ActivityType` union en `types/index.ts`, los casos en `Activity.tsx`, pasos en `tutorial.ts`, traducciones en `i18n.ts`, y actividades en `curriculum.ts`.
+**Impacto**: De 10 a 16 tipos de actividad, de 6 a 7 mundos. Bundle 653→727 KiB. 14 tests mantienen verde.
+
+### 2026-11-02: Service Worker impide actualizaciones en iPad
+**Qué pasó**: Tras desplegar v2.0, el iPad seguía mostrando la versión anterior. El Service Worker (Workbox, registerType: 'autoUpdate') cacheaba los archivos y no detectaba los cambios del nuevo build.
+**Solución**: Instruir al usuario a limpiar datos de Safari manualmente: Ajustes → Safari → Avanzado → Datos de sitios web → eliminar la entrada de la IP del servidor. Luego cerrar la PWA completamente y reabrir.
+**Lección**: `registerType: 'autoUpdate'` NO garantiza actualización instantánea en iPad Safari. Siempre avisar al usuario de este paso tras un despliegue nuevo.
 
 ## Notas para Claude
 
