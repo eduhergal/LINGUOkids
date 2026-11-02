@@ -1,0 +1,55 @@
+.phonics-id {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+  width: 100%;
+}
+
+.phonics-id__prompt {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-2xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.phonics-id__target-letter {
+  font-size: 80px;
+  font-weight: var(--font-weight-extra);
+  color: var(--color-secondary);
+}
+
+.phonics-id__options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 300px;
+}
+
+.phonics-id__option {
+  font-size: 48px;
+  font-weight: var(--font-weight-extra);
+  padding: var(--space-lg);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: background var(--transition-fast);
+}
+
+.phonics-id__option--correct {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.phonics-id__option--wrong {
+  background: var(--color-error);
+  color: #fff;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}

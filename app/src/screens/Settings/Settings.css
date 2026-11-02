@@ -1,0 +1,117 @@
+.settings__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.settings__header h1 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extra);
+}
+
+.settings__child {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-xl);
+}
+
+.settings__section {
+  margin-bottom: var(--space-lg);
+}
+
+.settings__label {
+  display: block;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-sm);
+}
+
+.settings__options-row {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.settings__option {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  background: var(--color-bg-soft);
+  transition: all var(--transition-fast);
+}
+
+.settings__option--active {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.settings__toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--space-md);
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.settings__switch {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-extra);
+  background: var(--color-bg-muted);
+  color: var(--color-text-light);
+}
+
+.settings__switch--on {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.settings__theme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.settings__theme-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-md) var(--space-sm);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  min-height: var(--min-touch-target);
+  border: 3px solid transparent;
+  transition: transform var(--transition-fast);
+}
+
+.settings__theme-btn--active {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+  transform: scale(1.05);
+}
+
+.settings__theme-btn:active {
+  transform: scale(0.95);
+}
+
+.settings__btn-progress {
+  display: block;
+  width: 100%;
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  min-height: var(--min-touch-target);
+  box-shadow: var(--shadow-sm);
+}

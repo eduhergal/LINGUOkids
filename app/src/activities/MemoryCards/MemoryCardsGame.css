@@ -1,0 +1,37 @@
+.memory {
+  display: grid;
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 360px;
+}
+
+.memory__card {
+  aspect-ratio: 1;
+  border-radius: var(--radius-lg);
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.memory__card--face {
+  background: var(--color-bg);
+}
+
+.memory__card--matched {
+  background: var(--color-success);
+  opacity: 0.6;
+}
+
+.memory__back {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extra);
+}
+
+.memory__emoji {
+  font-size: 36px;
+}

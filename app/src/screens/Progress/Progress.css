@@ -1,0 +1,171 @@
+.progress-screen__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extra);
+  margin-bottom: var(--space-md);
+}
+
+.progress-screen__child {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-xl);
+}
+
+.progress-screen__section {
+  margin-bottom: var(--space-xl);
+}
+
+.progress-screen__section h2 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+
+.progress-screen__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.progress-screen__stat {
+  text-align: center;
+  background: var(--color-bg-soft);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+}
+
+.progress-screen__stat-value {
+  display: block;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extra);
+  margin-bottom: 4px;
+}
+
+.progress-screen__stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+}
+
+.progress-screen__goal-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.progress-screen__goal-bar {
+  flex: 1;
+  height: 12px;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-screen__goal-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--theme-progress-start), var(--theme-progress-end));
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+/* Daily chart */
+.progress-chart {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: flex-end;
+  height: 120px;
+  padding: var(--space-sm) 0;
+}
+
+.progress-chart__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+}
+
+.progress-chart__bar-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.progress-chart__bar {
+  width: 70%;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.4s ease;
+}
+
+.progress-chart__label {
+  font-size: 10px;
+  color: var(--color-text-light);
+}
+
+.progress-chart__count {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Topics */
+.progress-topics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.progress-topic-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-md);
+}
+
+.progress-topic-row__icon {
+  font-size: 20px;
+}
+
+.progress-topic-row__name {
+  flex: 1;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.progress-topic-row__count {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  font-weight: 700;
+}
+
+.progress-topic-row__stars {
+  font-size: var(--font-size-sm);
+}
+
+/* Recommendations */
+.progress-recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.progress-recommendation {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  line-height: 1.4;
+  border-left: 4px solid var(--theme-primary);
+}
+
+.progress-recommendation__icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}

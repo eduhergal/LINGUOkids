@@ -1,0 +1,89 @@
+.pin-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  backdrop-filter: blur(4px);
+}
+
+.pin-dialog {
+  background: var(--color-bg);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  text-align: center;
+  min-width: 280px;
+  box-shadow: var(--shadow-lg);
+}
+
+.pin-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-lg);
+}
+
+.pin-dots {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-bottom: var(--space-md);
+}
+
+.pin-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.pin-dot--filled {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+.pin-dot--error {
+  border-color: var(--color-error);
+  background: var(--color-error);
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.pin-error {
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.pin-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.pin-key {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-soft);
+  transition: background var(--transition-fast);
+  margin: 0 auto;
+}
+
+.pin-key:active {
+  background: var(--color-bg-muted);
+}

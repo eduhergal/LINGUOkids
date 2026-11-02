@@ -1,0 +1,36 @@
+# Dependencies
+app/node_modules/
+node_modules/
+
+# Build output
+app/dist/
+
+# APK analysis (large files, not needed for the app)
+apk_extracted/
+decompiled/
+tools/
+analysis/
+*.apk
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Claude internal
+.claude/

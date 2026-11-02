@@ -1,0 +1,31 @@
+.screentime-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 27, 46, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+}
+
+.screentime-dialog {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: #fff;
+}
+
+.screentime-icon {
+  font-size: 80px;
+  margin-bottom: var(--space-lg);
+}
+
+.screentime-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extra);
+  margin-bottom: var(--space-md);
+}
+
+.screentime-message {
+  font-size: var(--font-size-lg);
+  opacity: 0.8;
+}

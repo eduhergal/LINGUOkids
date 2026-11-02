@@ -1,0 +1,80 @@
+.word-builder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4);
+  height: 100%;
+}
+
+.word-builder__hint {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.word-builder__emoji {
+  font-size: 56px;
+}
+
+.word-builder__hint-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-neutral-700);
+}
+
+.word-builder__slots {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.word-builder__slot {
+  width: 48px;
+  height: 56px;
+  border: 3px dashed var(--color-neutral-300);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.word-builder__slot--filled {
+  border-style: solid;
+  border-color: var(--color-accent);
+  background: var(--color-accent-light, #e0f4ff);
+}
+
+.word-builder__slot--shake {
+  animation: wb-shake 0.3s ease;
+}
+
+@keyframes wb-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+.word-builder__tiles {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.word-builder__tile {
+  width: 52px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--color-secondary);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}

@@ -1,0 +1,56 @@
+.lessons__title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extra);
+  margin-bottom: var(--space-sm);
+}
+
+.lessons__desc {
+  font-size: var(--font-size-md);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-lg);
+}
+
+.lessons__topics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.lessons__world-section {
+  margin-bottom: var(--space-xl);
+}
+
+.lessons__world-heading {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+}
+
+.lessons__unit {
+  margin-bottom: var(--space-lg);
+}
+
+.lessons__unit-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--color-bg-muted);
+}
+
+.lessons__lesson {
+  margin-bottom: var(--space-md);
+}
+
+.lessons__lesson-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-light);
+  margin-bottom: var(--space-sm);
+}
+
+.lessons__activities {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}

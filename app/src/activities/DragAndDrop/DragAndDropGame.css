@@ -1,0 +1,80 @@
+.dnd {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-4);
+  height: 100%;
+  touch-action: none;
+}
+
+.dnd__zones {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dnd__zone {
+  min-width: 120px;
+  min-height: 120px;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 3px dashed var(--color-neutral-300);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  transition: border-color var(--transition-fast);
+}
+
+.dnd__zone-label {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-neutral-600);
+}
+
+.dnd__zone-items {
+  display: flex;
+  gap: var(--space-1);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dnd__placed {
+  font-size: 32px;
+}
+
+.dnd__items {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.dnd__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  cursor: grab;
+  user-select: none;
+}
+
+.dnd__item--dragging {
+  opacity: 0.7;
+}
+
+.dnd__item-emoji {
+  font-size: 40px;
+}
+
+.dnd__item-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-neutral-600);
+}

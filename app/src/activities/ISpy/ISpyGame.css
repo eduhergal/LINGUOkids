@@ -1,0 +1,63 @@
+.ispy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+  width: 100%;
+}
+
+.ispy__targets {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.ispy__target {
+  font-size: 32px;
+  padding: var(--space-sm);
+  border: 3px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.ispy__target--found {
+  border-color: var(--color-success);
+  border-style: solid;
+  background: rgba(0, 206, 63, 0.1);
+}
+
+.ispy__scene {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  width: 100%;
+  max-width: 320px;
+}
+
+.ispy__item {
+  aspect-ratio: 1;
+  font-size: 32px;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.ispy__item--found {
+  background: var(--color-success);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.ispy__item--wrong {
+  background: var(--color-error);
+  animation: shake 0.3s ease;
+}
+
+.ispy__count {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-light);
+}

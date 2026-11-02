@@ -1,0 +1,99 @@
+:root {
+  /* Brand colors */
+  --color-primary: #ffe252;
+  --color-primary-dark: #f5d230;
+  --color-secondary: #ff6857;
+  --color-accent: #5ac9fa;
+  --color-success: #00ce3f;
+  --color-error: #ff4355;
+  --color-purple: #7013f7;
+  --color-pink: #ff5870;
+
+  /* Neutrals */
+  --color-text: #0c123b;
+  --color-text-light: #5a607d;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f5f6fa;
+  --color-bg-muted: #e8eaf0;
+  --color-border: #d4d7e3;
+
+  /* World colors */
+  --color-world-abc: #ff6857;
+  --color-world-123: #5ac9fa;
+  --color-world-colors: #7013f7;
+  --color-world-animals: #00ce3f;
+  --color-world-food: #ff9a3c;
+  --color-world-music: #ff5870;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-family: 'Nunito', 'Quicksand', system-ui, -apple-system, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 40px;
+  --font-weight-normal: 500;
+  --font-weight-bold: 700;
+  --font-weight-extra: 800;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(12, 18, 59, 0.08);
+  --shadow-md: 0 4px 12px rgba(12, 18, 59, 0.1);
+  --shadow-lg: 0 8px 24px rgba(12, 18, 59, 0.12);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Layout */
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --bottom-nav-height: 64px;
+
+  /* Theme (defaults — overridden by ThemeProvider at runtime) */
+  --theme-gradient-start: #1a4a2e;
+  --theme-gradient-mid: #2d7a4f;
+  --theme-gradient-end: #8bc34a;
+  --theme-primary: #4caf50;
+  --theme-accent: #ffeb3b;
+  --theme-nav-bg: rgba(26,74,46,0.95);
+  --theme-nav-active: #8bc34a;
+  --theme-card-bg: rgba(255,255,255,0.2);
+  --theme-text-on-gradient: #ffffff;
+  --theme-progress-start: #4caf50;
+  --theme-progress-end: #8bc34a;
+  --theme-letter-color: #2d7a4f;
+
+  /* Touch targets */
+  --min-touch-target: 48px;
+}
+
+:root[data-theme="dark"] {
+  --color-text: #f0f1f7;
+  --color-text-light: #a0a5c0;
+  --color-bg: #1a1b2e;
+  --color-bg-soft: #252640;
+  --color-bg-muted: #2f3054;
+  --color-border: #3d3e5c;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+}

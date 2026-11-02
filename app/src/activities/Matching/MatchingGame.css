@@ -1,0 +1,42 @@
+.matching {
+  display: flex;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 400px;
+}
+
+.matching__column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.matching__card {
+  padding: var(--space-md);
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  border: 3px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.matching__card--selected {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.matching__card--matched {
+  background: var(--color-success);
+  color: #fff;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.matching__card--wrong {
+  border-color: var(--color-error);
+  animation: shake 0.3s ease;
+}
